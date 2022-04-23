@@ -1,0 +1,66 @@
+body {
+    background-image: radial-gradient(darkcyan, yellow);
+    background-color: yellow;
+    color: darkcyan;
+    font-family: 'Rubik Puddles', cursive;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    width: 30vw;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.guessplate{
+    background-image: url("tiles.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: darkgrey;
+    width: 85px;
+    height: 85px;
+    margin: 5px;
+    box-shadow: 6px 6px 6px thistle;
+}
+
+.guessrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+#grid{
+    display: inline-block;
+    width: 65vw;
+}
+
+#notgrid{
+    display: inline-block;
+    width: 34vw;
+}
+
+.key {
+    font-family: 'Rubik Microbe', cursive;
+    color: rgb(0, 170, 255);
+    background-color: thistle;
+    width: 30px;
+    height: 33px;
+    margin: 1px;
+}
+
+#keyrow2, #keyrow1, #keyrow3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.wide{
+    width: 43px;
+}

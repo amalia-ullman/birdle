@@ -22,11 +22,15 @@ h1{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: darkgrey;
+    background-color: rgb(238, 255, 0);
     width: 85px;
     height: 85px;
     margin: 5px;
     box-shadow: 6px 6px 6px thistle;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .guessrow{
@@ -64,3 +68,26 @@ h1{
 .wide{
     width: 43px;
 }
+
+div.green{
+    transition: all 0.5s;
+}
+/* STARTING NTH CHILD ANIMATION STUFF WTV
+div.green:nth-child(n+1){
+
+}
+
+@keyframes turn-green-anim{
+    0% {
+        transform: rotateX(0deg);
+        background-color: black;
+    }
+    50% {
+        transform: rotateX(90deg);
+        background-color: black;
+    }
+    100% {
+        transform: rotateX(0deg);
+        background-color: rgb(30, 148, 30);
+    }
+} */

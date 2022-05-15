@@ -5,39 +5,40 @@ var currentWord = ""
 var letterSpot
 var guesses = 1
 var tiles
+var popup = ["that was alright I guess", "pretty gnarly dude", "could be better", "you got this!", "you can do better than that",
+"how embarrasing"]
 
-function readTextFile(file) {
+function getWord() {
     var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, true);
+    rawFile.open("GET", "words.txt", true);
     rawFile.onreadystatechange = function() {
         if (rawFile.readyState === 4) {
             if (rawFile.status === 200 || rawFile.status == 0) {
                 var allText = rawFile.responseText;
                 console.log(allText)
                 words = allText.split("\n");
+                wordValue = getRandomIntInclusive(0, words.length-1);
+                answerWord = words[wordValue];
+                console.log(answerWord);
             }
         }
     }
     rawFile.send(null);
 }
 
-readTextFile("words.txt");
-console.log(words)
-
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-function getRandomWord() {
+/*function getRandomWord() {
     wordValue = getRandomIntInclusive(0, words.length-1);
     word = words[wordValue];
     //console.log(word);
     console.log(word);
     return word;
-}
-answerWord = getRandomWord();
-console.log(answerWord);
+}*/
+
 
 function enterLetter(key) {
     if (currentWord.length < 5) {
@@ -80,26 +81,57 @@ function takeback() {
 
 
 function check() {
-    console.log("test");
-    answerWord = "hello";
-    console.log(currentWord);
-    console.log(answerWord);
     if (currentWord.length === 5) {
-        if (currentWord === answerWord) {
+        console.log(currentWord);
+        console.log(answerWord);
+        if (currentWord == answerWord) {
             console.log("you win.");
+            msg = popup[guesses-1];
+            setTimeout(() => { alert(msg) }, 13000);
         }
-        for (let x = 1; x < 6; x++) {
-            tiles = document.getElementById(`${guesses}-${x}`);
-            currentTile = document.getElementById(`${currentWord[i-1]}`)
+        for (let i = 1; i < 6; i++) {
+            tiles = document.getElementById(`${guesses}-${i}`);
+            currentKeyTile = document.getElementById(`${currentWord[i-1]}`)
             if (answerWord.includes(currentWord[i-1])) {
                 if (answerWord[i-1] === currentWord[i-1]) {
                     tiles.classList.add("green");
-                    currentTile.style.backgroundColor = "green";
+                    currentKeyTile.style.backgroundColor = "green";
+                }
+                else{
+                    tiles.classList.add("yellow");
+                    currentKeyTile.style.backgroundColor = "yellow";
                 }
             }
+            else{
+                tiles.classList.add("graeeaaey");
+                currentKeyTile.style.backgroundImage = 'url("sadbigbird.jpg")';
+                currentKeyTile.innerHTML = "";
+            }
+        }
+        guesses +=1;
+        currentWord = "";
+        if (guesses == 7) {
+            setTimeout(() => { alert(`get em next time tiger \n${answerWord}`) }, 13000);
         }
     }
 }
 
 addEventListener("keydown", key_input);
-//setTimeout((answerWord = getRandomWord()) => {}, 100);
+
+answerWord = getWord();
+
+
+setInterval(myTimer, 1000);
+
+var time = 30;
+
+function myTimer() {
+  document.getElementById("timer").innerHTML = time;
+  if (time > 0) {
+  time -= 1
+}
+  else if (time == 0) {
+  clearInterval(myTimer);
+}
+  
+}

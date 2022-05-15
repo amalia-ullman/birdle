@@ -13,6 +13,7 @@
 </head>
 <body>
     <h1>BIRDLE</h1>
+    <h2 id = "timer">30</h2>
     <!--GRID-->
     <div id="grid">
         <div id="guess1" class="guessrow">
@@ -85,7 +86,7 @@
             <button class="key" id="l" onclick="enterLetter('l')">L</button>
         </div>
         <div id="keyrow3">
-            <button class="key wide" id="enter">TER</button>
+            <button class="key wide" id="enter" onclick="check()">TER</button>
             <button class="key" id="z" onclick="enterLetter('z')">Z</button>
             <button class="key" id="x" onclick="enterLetter('x')">X</button>
             <button class="key" id="c" onclick="enterLetter('c')">C</button>
@@ -96,6 +97,7 @@
             <button class="key wide" id="del" onclick="takeback()">DEL</button>
         </div>
     </div>
+
 <script src="script.js"></script>
 </body>
 </html>

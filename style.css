@@ -56,6 +56,7 @@ h1{
     width: 30px;
     height: 33px;
     margin: 1px;
+    background-size: contain;
 }
 
 #keyrow2, #keyrow1, #keyrow3{
@@ -70,17 +71,54 @@ h1{
 }
 
 div.green{
+    color: rgb(124, 172, 195);
     transition: all 0.5s;
 }
-/* STARTING NTH CHILD ANIMATION STUFF WTV
-div.green:nth-child(n+1){
 
+div.green:nth-child(n+1){
+    animation-name: turn-green-anim;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    background-color: rgb(30, 148, 30);
+    transition-delay: 2s;
+}
+
+div.green:nth-child(n+2){
+    animation-name: turn-green-anim;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    background-color: rgb(30, 148, 30);
+    transition-delay: 4s;
+}
+
+div.green:nth-child(n+3){
+    animation-name: turn-green-anim;
+    animation-duration: 5s;
+    animation-delay: 4s;
+    background-color: rgb(30, 148, 30);
+    transition-delay: 6s;
+}
+
+div.green:nth-child(n+4){
+    animation-name: turn-green-anim;
+    animation-duration: 5s;
+    animation-delay: 6s;
+    background-color: rgb(30, 148, 30);
+    transition-delay: 8s;
+}
+
+div.green:nth-child(n+5){
+    animation-name: turn-green-anim;
+    animation-duration: 5s;
+    animation-delay: 8s;
+    background-color: rgb(30, 148, 30);
+    transition-delay: 10s;
 }
 
 @keyframes turn-green-anim{
     0% {
         transform: rotateX(0deg);
-        background-color: black;
+        background-color: rgb(238, 255, 0);
     }
     50% {
         transform: rotateX(90deg);
@@ -90,4 +128,132 @@ div.green:nth-child(n+1){
         transform: rotateX(0deg);
         background-color: rgb(30, 148, 30);
     }
-} */
+} 
+
+/*START OF GRAEEAAEY ANIMATION*/
+
+div.graeeaaey{
+    color: rgb(0, 174, 255);
+    transition: all 0.5s;
+}
+
+div.graeeaaey:nth-child(n+1){
+    animation-name: turn-graeeaaey-anim;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    background-color: rgb(92, 91, 91);
+    transition-delay: 2s;
+}
+
+div.graeeaaey:nth-child(n+2){
+    animation-name: turn-graeeaaey-anim;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    background-color: rgb(92, 91, 91);
+    transition-delay: 4s;
+}
+
+div.graeeaaey:nth-child(n+3){
+    animation-name: turn-graeeaaey-anim;
+    animation-duration: 5s;
+    animation-delay: 4s;
+    background-color: rgb(92, 91, 91);
+    transition-delay: 6s;
+}
+
+div.graeeaaey:nth-child(n+4){
+    animation-name: turn-graeeaaey-anim;
+    animation-duration: 5s;
+    animation-delay: 6s;
+    background-color: rgb(92, 91, 91);
+    transition-delay: 8s;
+}
+
+div.graeeaaey:nth-child(n+5){
+    animation-name: turn-graeeaaey-anim;
+    animation-duration: 5s;
+    animation-delay: 8s;
+    background-color: rgb(92, 91, 91);
+    transition-delay: 10s;
+}
+
+@keyframes turn-graeeaaey-anim{
+    0% {
+        transform: rotateX(0deg);
+        background-color: rgb(238, 255, 0);
+    }
+    50% {
+        transform: rotateX(90deg);
+        background-color: black;
+    }
+    100% {
+        transform: rotateX(0deg);
+        background-color: rgb(92, 91, 91);
+    }
+} 
+
+/* Yellow */
+
+div.yellow{
+    color: rgb(0, 170, 255);
+    transition: all 0.5s;
+}
+
+div.yellow:nth-child(n+1){
+    animation-name: turn-yellow-anim;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    background-color: rgb(30, 148, 30);
+    transition-delay: 2s;
+}
+
+div.yellow:nth-child(n+2){
+    animation-name: turn-yellow-anim;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    background-color: rgb(238, 255, 0);
+    transition-delay: 4s;
+}
+
+div.yellow:nth-child(n+3){
+    animation-name: turn-yellow-anim;
+    animation-duration: 5s;
+    animation-delay: 4s;
+    background-color: rgb(238, 255, 0);
+    transition-delay: 6s;
+}
+
+div.yellow:nth-child(n+4){
+    animation-name: turn-yellow-anim;
+    animation-duration: 5s;
+    animation-delay: 6s;
+    background-color: rgb(238, 255, 0);
+    transition-delay: 8s;
+}
+
+div.yellow:nth-child(n+5){
+    animation-name: turn-yellow-anim;
+    animation-duration: 5s;
+    animation-delay: 8s;
+    background-color: rgb(238, 255, 0);
+    transition-delay: 10s;
+}
+
+@keyframes turn-yellow-anim{
+    0% {
+        transform: rotateX(0deg);
+        background-color: rgb(238, 255, 0);
+    }
+    50% {
+        transform: rotateX(90deg);
+        background-color: black;
+    }
+    100% {
+        transform: rotateX(0deg);
+        background-color: rgb(238, 255, 0);
+    }
+} 
+
+h2{
+    text-align: center;
+}

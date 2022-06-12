@@ -22,7 +22,7 @@ function getWord() {
                 words = allText.split("\n");
                 wordValue = getRandomIntInclusive(0, words.length-1);
                 answerWord = words[wordValue];
-                if (answerword.length === 6) {
+                if (answerWord.length === 6) {
                     answerWord = answerWord.slice(0, -1);
                 }
                 console.log(answerWord);

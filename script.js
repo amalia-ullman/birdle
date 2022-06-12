@@ -22,7 +22,9 @@ function getWord() {
                 words = allText.split("\n");
                 wordValue = getRandomIntInclusive(0, words.length-1);
                 answerWord = words[wordValue];
-                answerWord = answerWord.slice(0, -1);
+                if (answerword.length === 6) {
+                    answerWord = answerWord.slice(0, -1);
+                }
                 console.log(answerWord);
             }
         }
@@ -56,7 +58,7 @@ function enterLetter(key) {
 }
 
 key_input = (event) => {
-        //console.log(event.keyCode);
+        //console.log(event.keyCode)
         if (event.keyCode > 64 && event.keyCode < 91) {
             enterLetter(event.key);
         }
